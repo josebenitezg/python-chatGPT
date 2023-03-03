@@ -43,10 +43,10 @@ You have to install the latest version of OPENAI in case you already have one.
 OPENAI_API_KEY
 ```
 
-5. And enjoy the app
+5. And enjoy and chat
 
 ```
-streamlit run main.py
+python chat.py
 ```
 
 
