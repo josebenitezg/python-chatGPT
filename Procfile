@@ -1,1 +1,1 @@
-web: gunicorn gettingstarted.wsgi
+web: gunicorn gettingstarted.wsgiheroku git:clone -a chatgpt-python 
