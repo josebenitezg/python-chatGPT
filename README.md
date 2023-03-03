@@ -35,7 +35,7 @@ env\Scripts\Activate.bat
 ```
 pip install -r requirements.txt
 ```
-You have to instal the latest version of OPENAI in case you already have one.
+You have to install the latest version of OPENAI in case you already have one.
 
 5. Create a .env file with the apikey from OPENAI, with the following content
 
