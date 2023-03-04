@@ -9,6 +9,10 @@ systemPrompt = { "role": "system", "content": "Use triple backticks with the lan
 data = []
 
 def get_response(incoming_msg):
+    if incoming_msg == "clear":
+        data.clear()
+        data.append({"role": "assistant", "content": 'hello'})
+        
     
     data.append({"role": "assistant", "content": incoming_msg})
     print('THE DATA', data)
