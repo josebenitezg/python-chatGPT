@@ -14,17 +14,16 @@ def get_response(incoming_msg):
         data.append({"role": "assistant", "content": 'hello'})
     else:  
         data.append({"role": "assistant", "content": incoming_msg})
-        print('THE DATA', data)
-        messages = [ systemPrompt ]
-        messages.extend(data)
-        print('THE MESSAGES', messages)
-        try:
-            response = openai.ChatCompletion.create(
-                model="gpt-3.5-turbo",
-                messages=messages
-            )
-            content = response["choices"][0]["message"]["content"]
-            return content
-        except openai.error.RateLimitError as e:
-            print(e)
-            return ""
+
+    messages = [ systemPrompt ]
+    messages.extend(data)
+    try:
+        response = openai.ChatCompletion.create(
+            model="gpt-3.5-turbo",
+            messages=messages
+        )
+        content = response["choices"][0]["message"]["content"]
+        return content
+    except openai.error.RateLimitError as e:
+        print(e)
+        return ""
